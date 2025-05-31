@@ -1,0 +1,42 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: auth-ms
+          uri: lb://AUTH-MS
+          predicates:
+            - Path=/api/auth/**
+        - id: alerting-ms
+          uri: lb://ALERTING-MS
+          predicates:
+            - Path=/api/alerts/**
+        - id: analytics-ms
+          uri: lb://ANALYTICS-MS
+          predicates:
+            - Path=/api/analytics/**
+        - id: market-ms
+          uri: lb://MARKET-MS
+          predicates:
+            - Path=/api/market/**
+        - id: notification-ms
+          uri: lb://NOTIFICATION-MS
+          predicates:
+            - Path=/api/notification/**
+        - id: profile-ms
+          uri: lb://PROFILE-MS
+          predicates:
+            - Path=/api/profile/**
+        - id: reporting-ms
+          uri: lb://REPORTING-MS
+          predicates:
+            - Path=/api/reports/**
+        - id: wallet-ms
+          uri: lb://WALLET-MS
+          predicates:
+            - Path=/api/wallet/**
+
+server:
+  port: 8222
