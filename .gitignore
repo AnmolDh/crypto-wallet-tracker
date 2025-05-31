@@ -1,0 +1,59 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+.idea_modules/
+
+# Logs
+logs/
+*.log
+
+# Target folder
+/target/
+
+# Build output
+/build/
+
+# Maven / Gradle
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+**/mvnw
+**/mvnw.cmd
+
+.gradle/
+build/
+
+# Compiled class files
+*.class
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Spring Boot devtools
+.spring-boot-devtools.properties
+
+# Node (if using frontend within the project)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Test reports
+/test-output/
+surefire-reports/
+jacoco.exec
+
+# Environment
+.env
+*.env
+.env.*
+
+# IntelliJ's shelf (optional, remove if you use this feature)
+.idea/shelf/
