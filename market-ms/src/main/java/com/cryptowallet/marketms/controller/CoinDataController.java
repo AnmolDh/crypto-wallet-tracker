@@ -2,7 +2,6 @@ package com.cryptowallet.marketms.controller;
 
 import com.cryptowallet.marketms.domain.dto.CoinDataResponse;
 import com.cryptowallet.marketms.service.CoinDataService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +13,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/market")
-@RequiredArgsConstructor
 public class CoinDataController {
     private final CoinDataService coinDataService;
+
+    public CoinDataController(CoinDataService coinDataService) {
+        this.coinDataService = coinDataService;
+    }
 
     @GetMapping()
     public ResponseEntity<List<CoinDataResponse>> getAllCoinData() {
